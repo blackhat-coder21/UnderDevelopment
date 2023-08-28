@@ -627,27 +627,31 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 } */
 
 
+
 .tablink {
   background-color: #b6b1b1;
   color: black;
   float: left;
   border: none;
   outline: none;
-  font-style: bold;
-  font-weight: 800px;
   cursor: pointer;
+  /* font-weight: 800px; */
+  font-style: bold;
   font-family: "Raleway", sans-serif;
   padding: 14px 16px;
   font-size: 20px;
   width: 33.33%;
+  overflow-x: auto; /* Allow horizontal scrolling for buttons */
+  white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .tablink:hover {
   background-color: #777;
 }
 
+
 .tabcontent {
-  color: white;
+  color: #eceff2;
   display: none;
   padding: 100px 20px;
   height: 100%;
