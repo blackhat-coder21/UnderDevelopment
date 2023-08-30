@@ -4,7 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -44,7 +44,7 @@
    * burgerMenu
    */
   const burgerMenu = select('.burger')
-  on('click', '.burger', function(e) {
+  on('click', '.burger', function (e) {
     burgerMenu.classList.toggle('active');
   })
 
@@ -60,9 +60,9 @@
 
       let portfolioFilters = select('#filters a', true);
 
-      on('click', '#filters a', function(e) {
+      on('click', '#filters a', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('active');
         });
         this.classList.add('active');
@@ -70,7 +70,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -136,3 +136,32 @@ function openPage(pageName, elmnt, color) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+
+let intro = document.querySelector(".intro");
+let logo = document.querySelector(".logo-header");
+let logoSpan = document.querySelectorAll(".logo");
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    logoSpan.forEach((span, idx) => {
+      setTimeout(() => {
+        span.classList.add('active');
+      }, (idx + 1) * 400);
+    });
+
+    setTimeout(() => {
+      logoSpan.forEach((span, idx) => {
+        setTimeout(() => {
+          span.classList.remove('active');
+          span.classList.add('fade');
+        }, (idx + 1) * 50)
+      })
+    }, 2000);
+
+    setTimeout(() => {
+      intro.style.top = '-100vh';
+    }, 2300)
+  })
+})
