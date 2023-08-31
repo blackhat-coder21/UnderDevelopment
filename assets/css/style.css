@@ -314,7 +314,7 @@ h6,
 }
 
 .custom-progress .progress-bar {
-  background: #000;
+  background: #0071bd;
 }
 
 .align-left {
@@ -602,11 +602,18 @@ h6,
   outline: none;
 }
 
+@media (max-width: 780px) {
+  .burger {
+    margin-right: 15px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  padding: 0 0 4rem 0;
+  padding: 0 0 2rem 0;
   padding-top: 50px;
   background-color: #000;
 }
@@ -616,20 +623,20 @@ h6,
 }
 
 .footer .name {
-  color: yellow;
+  color: #0071bd;
 }
 
 .social a {
   display: inline-block;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: .2rem solid #0ef;
+  border: .2rem solid #0071bd;
   background: transparent;
   position: relative;
   text-align: center;
-  margin: 1rem 1rem 1rem 0;
-  color: #0ef;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  color: #0071bd;
 }
 
 .social a span {
@@ -641,9 +648,9 @@ h6,
 }
 
 .social a:hover {
-  background: #0ef;
-  color: #323946;
-  box-shadow: 0 0 1rem #0ef;
+  background: #0071bd;
+  color: white;
+  box-shadow: 0 0 1rem #0071bd;
 }
 
 
@@ -686,6 +693,14 @@ h6,
   height: 100%;
 }
 
+@media (max-width: 780px) {
+  .tabcontent {
+    font-size: 2rem;
+    padding-right: 0;
+    margin-top: -40px;
+    padding-left: 15px;
+  }
+}
 
 #AI {
   background-color: #323946;
@@ -708,24 +723,6 @@ h6,
   font-weight: 500px;
 }
 
-.img_profile {
-  width: 45vw;
-  animation: floatImage 4s ease-in-out infinite;
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-2.8rem);
-  }
-
-  1000% {
-    transform: translateY(0);
-  }
-}
 
 .box .pic {
   height: 25px;
@@ -736,6 +733,7 @@ h6,
   font-size: 20px;
 }
 
+/* 
 .intro {
   position: fixed;
   z-index: 1;
@@ -788,5 +786,24 @@ h6,
 
   .logo.fade {
     bottom: 100px;
+  }
+} */
+
+.list-unstyled li::before {
+  color: #0071bd;
+}
+
+@media (max-width: 780px) {
+  .list-unstyled {
+    list-style-type: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .container .gap {
+    font-size: 1.8rem;
+    padding-right: 0;
+    margin-top: -50px;   
+    padding-left: 15px;
   }
 }
