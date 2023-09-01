@@ -803,3 +803,10 @@ h6,
     padding-right: 40px;
   }
 }
+
+.back-to-bottom {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  z-index: 999;
+}
