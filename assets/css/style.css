@@ -658,21 +658,18 @@ h6,
   background-color: rgb(82, 80, 80);
   color: white;
   float: left;
-  border: none;
+  border:none;
   outline: none;
   cursor: pointer;
-  /* font-weight: 800px; */
   font-style: bold;
   font-family: 'Poppins', sans-serif;
   padding: 14px 16px;
   font-size: 1.1rem;
-  font-weight: 800px;
+  font-weight: 500px;
   width: 33.33%;
   overflow-x: auto;
-  /* Allow horizontal scrolling for buttons */
   white-space: nowrap;
-  /* Prevent button text from wrapping */
-  transition: none !important;
+  /* transition: none !important; */
 }
 
 
@@ -687,14 +684,26 @@ h6,
   display: none;
   padding: 100px 10px;
   height: 100%;
+  margin-top: -35px;
 }
 
 @media (max-width: 780px) {
   .tabcontent {
-    font-size: 2rem;
-    padding-right: 0;
-    margin-top: -40px;
-    padding-left: 15px;
+    font-size: 1rem;
+    padding-right: 0px;
+    margin-top: -60px;
+    padding-left: 0px;
+    margin-bottom: -100px;
+  }
+  .box{
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+@media (max-width: 780px) {
+  .text{
+    font-size: 1rem;
   }
 }
 
@@ -792,21 +801,10 @@ h6,
   }
 }
 
-.container{
-  max-width: 100%;
-}
-
 @media (min-width: 780px) {
   .container{
     max-width: 100%;
     padding-left: 40px;
     padding-right: 40px;
   }
-}
-
-.back-to-bottom {
-  position: fixed;
-  bottom: 20px; 
-  right: 20px;
-  z-index: 999;
 }
