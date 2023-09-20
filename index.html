@@ -110,8 +110,8 @@
 
       <!--Committed Changes on 22-08-2023-->
       <div class="box" data-aos="fade-up" data-aos-delay="200">
-        <button class="tablink" onclick="openPage('AI', this, '#323946')" id="defaultOpen"><img src="assets/img/robot.png"
-            class="pic"><span class="text">&nbsp&nbspAI Art</span></button>
+        <button class="tablink" onclick="openPage('AI', this, '#323946')" id="defaultOpen"><img
+            src="assets/img/robot.png" class="pic"><span class="text">&nbsp&nbspAI Art</span></button>
         <button class="tablink" id="btn1" onclick="openPage('Animation', this, '#323946')"><img
             src="assets/img/animation_pic.png" class="pic"><span class="text">&nbsp&nbspAnimation</span></button>
         <button class="tablink" onclick="openPage('Video', this, '#323946')"><img src="assets/img/video_edit.png"
@@ -120,13 +120,69 @@
         <div id="AI" class="tabcontent">
           <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
             <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="project-1-ai.html" class="item-wrap fancybox">
+              <!-- <a href="project-1-ai.html" class="item-wrap fancybox">
                 <div class="work-info">
                   <h3>AI Art!</h3>
-                  <!--span>Sub-heading</span-->
-                </div>
+                </div> -->
+
+
+
+              <!-- <div class="image-container">
                 <img class="img-fluid" src="assets/img/ai_art.webp">
-              </a>
+                <div class="info-icon" ><img src="assets/img/info_img_black.png" />
+                </div>
+              </div> -->
+
+
+              <div class="popover__wrapper">
+                <div class="image-container">
+                  <img class="img-fluid" src="assets/img/ai_art.webp">
+                  <div class="info-icon"><img src="assets/img/info_img_black.png" /></div>
+                </div>
+                <div class="popover__content">
+                  <div class="c1">
+                    <div class="c2">
+                      <div class="c3">Prompt&nbsp;&nbsp;&nbsp;</div>
+                      <div class="c4"><span class="c5">&nbsp;&nbsp;TXT2IMG&nbsp;&nbsp;</span></div>
+                      <div class="c6"><img class="copy_img" id="copyButton1" src="assets/img/copy.png"></div>
+                    </div>
+                    <div class="popup" id="copyPopup1">Copied</div>
+                    <pre class="prompt1">  (art by Tom Everhart:1.0), Anxious slight Golden Age Walter White, 
+  ((walter white serious grim face)), Politician, Ginger beard, Watch, 
+  Robotic Body Parts, Sketch, Screaming, Realism, volumetric lighting, 
+  CMYK Colors, virtual, disintegration, wireframe, rgb, translucent, 
+  transparent, reflection, ultra detailed anime, high res anime, high 
+  quality, (anime style), angel , Cthulhu, biomechinical, biomachines,
+  ((hnsrdlf style)), detailed reflections, dark atmosphere, gothic art, 
+  futuristic, realistic blood, realistic reflections, RTX graphic, HDR, 
+  ultra detailed, real blood, detailed sky, nightmare</pre>
+                  </div>
+
+
+                  <div class="c1">
+                    <div class="c2">
+                      <div class="c3">Negative prompt&nbsp;&nbsp;&nbsp;</div>
+                      <div class="c6"><img class="copy_img1"  src="assets/img/copy.png"></div>
+                    </div>
+                    <div class="popup" id="copyPopup2">Copied</div>
+                    <pre class="prompt2">  (art by Tom Everhart:1.0), Anxious slight Golden Age Walter White, 
+  ((walter white serious grim face)), Politician, Ginger beard, Watch, 
+  Robotic Body Parts, Sketch, Screaming, Realism, volumetric lighting, 
+  CMYK Colors, virtual, disintegration, wireframe, rgb, translucent, 
+  transparent, reflection, ultra detailed anime, high res anime, high 
+  quality, (anime style), angel , Cthulhu, biomechinical, biomachines,
+  ((hnsrdlf style)), detailed reflections, dark atmosphere, gothic art, 
+  futuristic, realistic blood, realistic reflections, RTX graphic, HDR, 
+  ultra detailed, real blood, detailed sky, nightmare</pre>
+                  </div>
+
+
+                </div>
+              </div>
+
+
+
+              <!-- </a> -->
             </div>
             <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
               <a href="project-2.html" class="item-wrap fancybox">
@@ -175,6 +231,7 @@
             </div>
           </div>
         </div>
+
 
         <div id="Animation" class="tabcontent">
           <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
