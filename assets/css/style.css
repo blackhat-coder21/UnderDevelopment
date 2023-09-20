@@ -1083,3 +1083,17 @@ h6,
   border-radius: 5px;
   z-index: 1000;
 }
+
+
+@media (max-width: 780px) {
+  .popover__wrapper:hover .popover__content {
+    width: 320px;
+  }
+  .copy_img{
+    padding-left: 10px;
+  }
+  
+  .copy_img1{
+    padding-left: 10px;
+  }
+}
