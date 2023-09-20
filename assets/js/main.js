@@ -142,5 +142,70 @@ document.getElementById("defaultOpen").click();
 
 
 
+// // copy content
+// const copyButton = document.getElementById('copyButton');
+
+// // Get a reference to the pre tag
+// const preTag = document.querySelector('.prompt');
+
+// // Get a reference to the custom popup
+// const copyPopup = document.getElementById('copyPopup');
+
+// // Add a click event listener to the copy button
+// copyButton.addEventListener('click', () => {
+//   // Create a temporary text area element
+//   const tempTextArea = document.createElement('textarea');
+
+//   // Set the value of the text area to the content of the pre tag
+//   tempTextArea.value = preTag.textContent;
+
+//   // Append the text area to the document (it doesn't need to be visible)
+//   document.body.appendChild(tempTextArea);
+
+//   // Select the text within the text area
+//   tempTextArea.select();
+
+//   // Execute the copy command
+//   document.execCommand('copy');
+
+//   // Remove the temporary text area from the document
+//   document.body.removeChild(tempTextArea);
+
+//   // Show the popup
+//   copyPopup.style.display = 'block';
+
+//   // Hide the popup after a delay (e.g., 2 seconds)
+//   setTimeout(() => {
+//     copyPopup.style.display = 'none';
+//   }, 2000); // 2000 milliseconds (2 seconds)
+// });
 
 
+function copyTextAndShowPopup(copyButtonId, copyPopupId, preClassName) {
+  const copyButton = document.getElementById(copyButtonId);
+  const preTag = document.querySelector(`.${preClassName}`);
+  const copyPopup = document.getElementById(copyPopupId);
+
+  copyButton.addEventListener('click', () => {
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = preTag.textContent;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+
+    // Show the corresponding popup
+    copyPopup.style.display = 'block';
+
+    // Hide the popup after a delay (e.g., 2 seconds)
+    setTimeout(() => {
+      copyPopup.style.display = 'none';
+    }, 2000); // 2 seconds
+  });
+}
+
+// Initialize copy functionality for the first set of elements
+copyTextAndShowPopup('copyButton1', 'copyPopup1', 'prompt1');
+
+// Initialize copy functionality for the second set of elements
+copyTextAndShowPopup('copyButton2', 'copyPopup2', 'prompt2');
