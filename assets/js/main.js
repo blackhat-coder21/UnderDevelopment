@@ -139,48 +139,6 @@ document.getElementById("defaultOpen").click();
 
 
 
-
-
-
-// // copy content
-// const copyButton = document.getElementById('copyButton');
-
-// // Get a reference to the pre tag
-// const preTag = document.querySelector('.prompt');
-
-// // Get a reference to the custom popup
-// const copyPopup = document.getElementById('copyPopup');
-
-// // Add a click event listener to the copy button
-// copyButton.addEventListener('click', () => {
-//   // Create a temporary text area element
-//   const tempTextArea = document.createElement('textarea');
-
-//   // Set the value of the text area to the content of the pre tag
-//   tempTextArea.value = preTag.textContent;
-
-//   // Append the text area to the document (it doesn't need to be visible)
-//   document.body.appendChild(tempTextArea);
-
-//   // Select the text within the text area
-//   tempTextArea.select();
-
-//   // Execute the copy command
-//   document.execCommand('copy');
-
-//   // Remove the temporary text area from the document
-//   document.body.removeChild(tempTextArea);
-
-//   // Show the popup
-//   copyPopup.style.display = 'block';
-
-//   // Hide the popup after a delay (e.g., 2 seconds)
-//   setTimeout(() => {
-//     copyPopup.style.display = 'none';
-//   }, 2000); // 2000 milliseconds (2 seconds)
-// });
-
-
 function copyTextAndShowPopup(copyButtonId, copyPopupId, preClassName) {
   const copyButton = document.getElementById(copyButtonId);
   const preTag = document.querySelector(`.${preClassName}`);
@@ -209,3 +167,61 @@ copyTextAndShowPopup('copyButton1', 'copyPopup1', 'prompt1');
 
 // Initialize copy functionality for the second set of elements
 copyTextAndShowPopup('copyButton2', 'copyPopup2', 'prompt2');
+
+
+
+
+const iconContainer = document.querySelector('.icon-container');
+const popoverContent = document.querySelector('.popover-content');
+
+iconContainer.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent clicks inside the icon container from closing the popover
+  const iconRect = iconContainer.getBoundingClientRect();
+  popoverContent.style.top = iconRect.bottom + 'px'; // Position below the icon
+  popoverContent.style.left = iconRect.left + 'px'; // Align with the left edge of the icon
+  popoverContent.style.display = popoverContent.style.display === 'block' ? 'none' : 'block';
+});
+
+document.addEventListener('click', (e) => {
+  if (!iconContainer.contains(e.target) && e.target !== popoverContent) {
+    popoverContent.style.display = 'none';
+  }
+});
+
+
+
+
+
+function copyText(contentId, copyImageClass, tickImageClass) {
+  const textToCopy = document.getElementById(contentId);
+
+  // Create a textarea element to temporarily hold the text
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy.textContent;
+  document.body.appendChild(textarea);
+
+  // Select the text in the textarea and copy it to the clipboard
+  textarea.select();
+  document.execCommand("copy");
+
+  // Remove the textarea element
+  document.body.removeChild(textarea);
+
+  // Hide the copy button image and show the tick image
+  const copyImage = document.querySelector(`.${copyImageClass}`);
+  copyImage.style.display = "none";
+
+  // Find the corresponding tick image and show it
+  const tickImage = document.querySelector(`.${tickImageClass}`);
+  tickImage.style.display = "inline";
+
+  // Reset the tick image after a few seconds
+  setTimeout(() => {
+    copyImage.style.display = "inline";
+    tickImage.style.display = "none";
+  }, 2000); // Reset after 2 seconds
+}
+
+
+
+
