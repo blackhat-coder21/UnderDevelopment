@@ -1057,7 +1057,8 @@ h6,
   width: fit-content; */
     height: 150px;
     overflow-y: scroll;
-    width: 250px;
+    width: 300px;
+    padding: 5px;
     font-size: 0.7rem;
     font-family: monospace;
   }
@@ -1106,7 +1107,7 @@ h6,
     background-color: #454649;
     font-size: 0.7rem;
     text-align: right !important;
-    padding-left: 80px;
+    padding-left: 130px;
   }
   .d3{
     display: inline;
@@ -1116,7 +1117,7 @@ h6,
     text-align: right !important;
     background-color: #454649;
     font-size: 0.7rem;
-    padding-left: 125px;
+    padding-left: 175px;
   }
 
   .d5{
@@ -1127,11 +1128,11 @@ h6,
     text-align: right !important;
     background-color: #454649;
     font-size: 0.7rem;
-    padding-left: 15px;
+    padding-left: 30px;
   }
   .d7{
     display: inline;
-    padding-left: 10px;
+    padding-left: 30px;
   }
 
   .d8{
@@ -1139,21 +1140,21 @@ h6,
   }
   .d10{
     display: inline;
-    padding-left: 5px;
+    padding-left: 15px;
   }
   .d9{
     display: inline;
     text-align: right !important;
     background-color: #454649;
     font-size: 0.7rem;
-    padding-left: 5px;
+    padding-left: 10px;
   }
   .d11{
     display: inline;
     text-align: right !important;
     background-color: #454649;
     font-size: 0.7rem;
-    padding-left: 0px;
+    padding-left: 35px;
   }
 
 
@@ -1182,7 +1183,7 @@ h6,
     transform: translate(-100%, 0);
     background-color: #2c2e33;
     padding: 1.5rem;
-    width: 300px !important;
+    width: 350px !important;
     height: fit-content !important;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     z-index: 1001;
@@ -1192,7 +1193,22 @@ h6,
     position: absolute;
     z-index: 10;
     content: "";
-    left: calc(280px);
+    left: calc(330px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #bfbfbf transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  #img11:before {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    left: calc(872px);
+    bottom: calc(-520px);
+    transform: rotate(-270deg);
     top: -8px;
     border-style: solid;
     border-width: 0 10px 10px 10px;
@@ -1208,7 +1224,7 @@ h6,
     border-radius: 5px;
     height: 550px;
     width: 450px;
-    transform: translate(-280px, 5px);
+    transform: translate(-330px, 5px);
   }
 
   .icon-container:hover #img11 {
@@ -1218,7 +1234,7 @@ h6,
     border-radius: 5px;
     height: 550px;
     width: 450px;
-    transform: translate(-300px, -550px);
+    transform: translate(-360px, -540px);
   }
 
 }
