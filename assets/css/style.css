@@ -1149,6 +1149,29 @@ h6,
     margin-top: 5px;
   }
 
+
+  .k2,
+  .k4 {
+    flex-basis: 70%;
+    text-align: right;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+
+  .k6 {
+    flex-basis: 15%;
+    text-align: right;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+
+  .k9 {
+    flex-basis: 14%;
+    text-align: right;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+
   /* IMAGE 1 */
 
 
@@ -3285,21 +3308,21 @@ h6,
   }
 
   .s2,
-  .s4 {
+  .s4, .k2, .k4 {
     flex-basis: 70%;
     text-align: right;
     padding-left: 0;
     margin-top: 5px;
   }
 
-  .s6 {
+  .s6, .k6{
     flex-basis: 25%;
     text-align: right;
     padding-left: 0;
     margin-top: 5px;
   }
 
-  .s9 {
+  .s9, .k9 {
     flex-basis: 13%;
     text-align: right;
     padding-left: 0;
