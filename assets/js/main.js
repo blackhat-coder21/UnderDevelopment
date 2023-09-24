@@ -279,3 +279,9 @@ function copyText(contentId, copyImageClass, tickImageClass) {
   // After copying, adjust the prompt box size
   adjustPromptBoxSize();
 }
+
+
+
+
+
+

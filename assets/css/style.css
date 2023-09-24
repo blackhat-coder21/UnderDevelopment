@@ -1987,6 +1987,7 @@ h6,
     height: 550px;
     width: 450px;
     transform: translate(-350px, -670px);
+  }
 
 }
 
@@ -3207,4 +3208,5 @@ h6,
     padding-left: 74px;
     font-family: monospace;
   }
+
 }
