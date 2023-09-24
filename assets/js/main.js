@@ -283,7 +283,32 @@ function copyText(contentId, copyImageClass, tickImageClass) {
 
 
 
-function copyContentToClipboard(popoverId) {
+// function copyContentToClipboard(popoverId) {
+//   // Get the content of the specified popover-content element
+//   var popoverContent = document.getElementById(popoverId);
+//   var contentToCopy = popoverContent.innerText;
+
+//   // Create a temporary textarea element to hold the text
+//   var tempTextarea = document.createElement('textarea');
+//   tempTextarea.value = contentToCopy;
+
+//   // Append the textarea to the document
+//   document.body.appendChild(tempTextarea);
+
+//   // Select and copy the text
+//   tempTextarea.select();
+//   document.execCommand('copy');
+
+//   // Remove the temporary textarea
+//   document.body.removeChild(tempTextarea);
+
+//   // Optionally, provide feedback to the user
+//   // alert('Content copied to clipboard');
+// }
+
+
+
+function copyContentToClipboard(popoverId, buttonId) {
   // Get the content of the specified popover-content element
   var popoverContent = document.getElementById(popoverId);
   var contentToCopy = popoverContent.innerText;
@@ -302,6 +327,17 @@ function copyContentToClipboard(popoverId) {
   // Remove the temporary textarea
   document.body.removeChild(tempTextarea);
 
-  // Optionally, provide feedback to the user
-  // alert('Content copied to clipboard');
+  // Change the button background to green
+  var copyButton = document.getElementById(buttonId);
+  copyButton.style.backgroundColor = '#4CAF50'; // Green color
+
+  // Reset the button background after a delay (e.g., 2 seconds)
+  setTimeout(function () {
+    copyButton.style.backgroundColor = '#0071bd'; // Original color
+  }, 2000); // 2000 milliseconds (2 seconds)
 }
+
+
+
+
+
