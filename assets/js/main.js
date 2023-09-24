@@ -224,3 +224,84 @@ function copyText(contentId, copyImageClass, tickImageClass) {
 
 
 
+function adjustPromptBoxSize() {
+  const promptBox1 = document.getElementById('prompt-box1');
+  const content1 = document.getElementById('content1');
+  const promptBox2 = document.getElementById('prompt-box2');
+  const content2 = document.getElementById('content2');
+
+  const minHeight = 150;
+
+  // Get the height of the content for both containers
+  const contentHeight1 = content1.offsetHeight;
+  const contentHeight2 = content2.offsetHeight;
+
+
+  promptBox1.style.maxHeight = contentHeight1 < minHeight ? minHeight + 'px' : '300px';
+  promptBox2.style.maxHeight = contentHeight2 < minHeight ? minHeight + 'px' : '300px';
+  // Adjust the prompt box height based on the content height
+}
+
+// Call the adjustPromptBoxSize function when the page loads
+window.addEventListener('load', adjustPromptBoxSize);
+
+// Call the adjustPromptBoxSize function whenever the content changes
+// For example, you can call it after copying the text in your specific use case
+function copyText(contentId, copyImageClass, tickImageClass) {
+  const textToCopy = document.getElementById(contentId);
+
+  // Create a textarea element to temporarily hold the text
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy.textContent;
+  document.body.appendChild(textarea);
+
+  // Select the text in the textarea and copy it to the clipboard
+  textarea.select();
+  document.execCommand("copy");
+
+  // Remove the textarea element
+  document.body.removeChild(textarea);
+
+  // Hide the copy button image and show the tick image
+  const copyImage = document.querySelector(`.${copyImageClass}`);
+  copyImage.style.display = "none";
+
+  // Find the corresponding tick image and show it
+  const tickImage = document.querySelector(`.${tickImageClass}`);
+  tickImage.style.display = "inline";
+
+  // Reset the tick image after a few seconds
+  setTimeout(() => {
+    copyImage.style.display = "inline";
+    tickImage.style.display = "none";
+  }, 2000); // Reset after 2 seconds
+
+  // After copying, adjust the prompt box size
+  adjustPromptBoxSize();
+}
+
+
+
+
+function copyContentToClipboard(popoverId) {
+  // Get the content of the specified popover-content element
+  var popoverContent = document.getElementById(popoverId);
+  var contentToCopy = popoverContent.innerText;
+
+  // Create a temporary textarea element to hold the text
+  var tempTextarea = document.createElement('textarea');
+  tempTextarea.value = contentToCopy;
+
+  // Append the textarea to the document
+  document.body.appendChild(tempTextarea);
+
+  // Select and copy the text
+  tempTextarea.select();
+  document.execCommand('copy');
+
+  // Remove the temporary textarea
+  document.body.removeChild(tempTextarea);
+
+  // Optionally, provide feedback to the user
+  // alert('Content copied to clipboard');
+}
