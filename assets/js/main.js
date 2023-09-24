@@ -283,25 +283,5 @@ function copyText(contentId, copyImageClass, tickImageClass) {
 
 
 
-function copyContentToClipboard(popoverId) {
-  // Get the content of the specified popover-content element
-  var popoverContent = document.getElementById(popoverId);
-  var contentToCopy = popoverContent.innerText;
 
-  // Create a temporary textarea element to hold the text
-  var tempTextarea = document.createElement('textarea');
-  tempTextarea.value = contentToCopy;
 
-  // Append the textarea to the document
-  document.body.appendChild(tempTextarea);
-
-  // Select and copy the text
-  tempTextarea.select();
-  document.execCommand('copy');
-
-  // Remove the temporary textarea
-  document.body.removeChild(tempTextarea);
-
-  // Optionally, provide feedback to the user
-  // alert('Content copied to clipboard');
-}
