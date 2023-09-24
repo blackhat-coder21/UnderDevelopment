@@ -1037,7 +1037,7 @@ h6,
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px){
   #gallery {
     -moz-column-count: 1;
     -webkit-column-count: 1;
@@ -1062,8 +1062,8 @@ h6,
     width: 300px;
     max-height: 200px;
     overflow-y: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .c4 {
