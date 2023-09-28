@@ -785,10 +785,11 @@ h6,
 }
 
 
-.logo{
+img.logo{
   width: 12%;
   height: auto;
   display: block;
+  border-radius: 0px;
 }
 
 @media (max-width: 780px) {
@@ -1101,17 +1102,17 @@ img {
 }
 
 .popup-heading{
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .parameter {
-  background-color: rgba(25, 113, 194, 0.2);
+  background-color: #233549;
   border-radius: 3px;
   padding-inline: 3px;
   display: inline;
   color: lightblue;
   font-size: 12px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 /* Define the container for the copy button */
