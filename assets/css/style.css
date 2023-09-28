@@ -794,7 +794,7 @@ img.logo {
 
 @media (max-width: 780px) {
   img.logo {
-    width: 22%;
+    width: 25%;
     height: auto;
     display: block;
     border-radius: 0px;
