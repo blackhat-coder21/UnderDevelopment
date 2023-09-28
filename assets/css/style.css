@@ -1032,6 +1032,18 @@ img {
   text-align: center;
 }
 
+.info-icon {
+  position: absolute;
+  bottom: 5px;
+  /* Adjust the position as needed, e.g., change 'bottom' to 'top' */
+  right: 10px;
+  /* Adjust the position as needed, e.g., change 'right' to 'left' */
+  cursor: pointer;
+  /* Change the cursor to a pointer to indicate interactivity */
+  font-size: 21px;
+  /* Adjust the font size to your desired size */
+}
+
 .info-popup {
   position: absolute;
   bottom: 0;
@@ -1085,6 +1097,9 @@ img {
   /* Enable vertical scrolling when content overflows */
 }
 
+.popup-heading{
+  font-size: 20px;
+}
 
 .parameter {
   background-color: lightblue;
@@ -1094,6 +1109,18 @@ img {
   color: blue;
   font-size: 12px;
   font-weight: bold;
+}
+
+/* Define the container for the copy button */
+.copy-button {
+  display: inline-block;
+  position: relative;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Create the copy icon shape */
@@ -1115,4 +1142,11 @@ img {
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.copy-done::before {
+  content: "\2713";
+  /* Unicode character for a check icon */
+  font-size: 18px;
+  color: lightgreen;
 }
