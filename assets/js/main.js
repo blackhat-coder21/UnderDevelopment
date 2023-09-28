@@ -283,5 +283,3 @@ function copyText(contentId, copyImageClass, tickImageClass) {
 
 
 
-
-
