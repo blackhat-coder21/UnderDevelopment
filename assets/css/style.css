@@ -969,6 +969,8 @@ h6,
 @media (max-width: 780px) {
   .motion {
     margin-top: 25px;
+    margin-left: -10px;
+    margin-right: -10px
   }
 }
 
@@ -1092,6 +1094,7 @@ img {
   padding: 7px;
   max-height: 20vh;
   font-size: 15px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* Set a maximum height (adjust as needed) */
   overflow-y: auto;
   /* Enable vertical scrolling when content overflows */
@@ -1102,11 +1105,11 @@ img {
 }
 
 .parameter {
-  background-color: lightblue;
+  background-color: rgba(25, 113, 194, 0.2);
   border-radius: 3px;
   padding-inline: 3px;
   display: inline;
-  color: blue;
+  color: lightblue;
   font-size: 12px;
   font-weight: bold;
 }
@@ -1149,4 +1152,11 @@ img {
   /* Unicode character for a check icon */
   font-size: 18px;
   color: lightgreen;
+}
+
+@media (max-width: 780px) {
+  .reel{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
