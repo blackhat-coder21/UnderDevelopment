@@ -785,7 +785,7 @@ h6,
 }
 
 
-img.logo{
+img.logo {
   width: 12%;
   height: auto;
   display: block;
@@ -793,9 +793,11 @@ img.logo{
 }
 
 @media (max-width: 780px) {
-  .logo {
-    height: 35px;
-    width: 70px;
+  img.logo {
+    width: 22%;
+    height: auto;
+    display: block;
+    border-radius: 0px;
   }
 }
 
@@ -1101,7 +1103,7 @@ img {
   /* Enable vertical scrolling when content overflows */
 }
 
-.popup-heading{
+.popup-heading {
   font-size: 18px;
 }
 
@@ -1156,7 +1158,7 @@ img {
 }
 
 @media (max-width: 780px) {
-  .reel{
+  .reel {
     padding-right: 0px;
     padding-left: 0px;
   }
